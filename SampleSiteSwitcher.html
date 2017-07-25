@@ -1,0 +1,25 @@
+<div id="grand" class="container" ng-app="siteSwitcher" ng-controller="Switcher">
+  <div class="row">
+    <div class="col-xs-4">
+    <a href="https://www.raymondjames.com/rj-th1-blue" target="_blank">
+    <img src="images/new/Templates/thumb_Template1blue.jpg" alt="Template 1 - Blue" border="0" /></a>
+    <br />
+    <label>
+    <input name="layout" class="layout" type="radio" value="rj-th1-blue" ng-model="SampleSite" />&nbsp;Template 1 - Blue</label>
+    </div>
+  </div>
+  <div class="col-xs-6">
+  <label>
+  <input type="checkbox" name="services" value="Sustainable Investing" />
+  &nbsp; <a href="https://www.raymondjames.com/{{SampleSite}}/services/services/sustainable-investing" target="_blank" >Sustainable Investing</a>
+  </label>
+  </div>
+</div>
+<script>
+  //Sample Site Switcher, Angular JS
+    var app = angular.module('siteSwitcher', []);
+    app.controller('Switcher', function($scope) {
+    $scope.SampleSite = "rj-th1-blue";
+    });
+</script>
+                                
